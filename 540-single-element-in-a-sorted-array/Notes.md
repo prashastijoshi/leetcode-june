@@ -1,1 +1,1 @@
-<h2>single-element-in-a-sorted-array Notes</h2><hr>[ Time taken: 6m 26s ]
+<h2>single-element-in-a-sorted-array Notes</h2><hr>[ Time taken: 24m 11s ]

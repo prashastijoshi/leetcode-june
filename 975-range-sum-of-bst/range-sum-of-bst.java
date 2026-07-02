@@ -16,10 +16,6 @@
 class Solution {
     // private int sum=0;
     public int rangeSumBST(TreeNode root, int low, int high) {
-        return preorder(root,low,high);
-         
-    }
-    public int preorder(TreeNode root,int low, int high){
         if(root==null){
             return 0;
         }
@@ -28,8 +24,8 @@ class Solution {
             sum+=root.val;
         }
         
-        sum+=preorder(root.left,low,high);
-        sum+=preorder(root.right,low,high);
+        sum+=rangeSumBST(root.left,low,high);
+        sum+=rangeSumBST(root.right,low,high);
         return sum;
 
     }

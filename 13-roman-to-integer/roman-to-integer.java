@@ -11,15 +11,15 @@ class Solution {
 
         int result = 0;
         char[] nums = s.toCharArray();
-        for(int i = 0;i<s.length()-1; i++){
-            if(maps.get(nums[i]) < maps.get(nums[i+1])){
+        for(int i = 0;i<s.length(); i++){
+            if(i+1 < s.length() && maps.get(nums[i]) < maps.get(nums[i+1])){
                 result-=maps.get(nums[i]);
             }
             else{
                 result+=maps.get(nums[i]);
             }
         }
-        result+=maps.get(nums[s.length()-1]);
+        // result+=maps.get(nums[s.length()-1]);
         return result;
         
         

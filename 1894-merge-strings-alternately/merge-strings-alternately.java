@@ -4,10 +4,10 @@ class Solution {
         int j = 0;
         int n = word1.length();
         int m = word2.length();
-        String result="";
+        StringBuilder result = new StringBuilder();
         while(i<n || j<m){
-            if(i<n) result+=word1.charAt(i);
-            if(j<m) result+=word2.charAt(j);
+            if(i<n) result.append(word1.charAt(i));
+            if(j<m) result.append(word2.charAt(j));
             i++;
             j++;
         }
@@ -17,7 +17,7 @@ class Solution {
         // if(j<m){
         //     result+=word2.substring(j,m);
         // }
-        return result;
+        return result.toString();
         
     }
 }

@@ -5,18 +5,18 @@ class Solution {
         int n = word1.length();
         int m = word2.length();
         String result="";
-        while(i<n && j<m){
-            result+=word1.charAt(i);
-            result+=word2.charAt(j);
+        while(i<n || j<m){
+            if(i<n) result+=word1.charAt(i);
+            if(j<m) result+=word2.charAt(j);
             i++;
             j++;
         }
-        if(i<n){
-            result+=word1.substring(i,n);
-        }
-        if(j<m){
-            result+=word2.substring(j,m);
-        }
+        // if(i<n){
+        //     result+=word1.substring(i,n);
+        // }
+        // if(j<m){
+        //     result+=word2.substring(j,m);
+        // }
         return result;
         
     }

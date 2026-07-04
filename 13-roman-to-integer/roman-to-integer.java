@@ -10,13 +10,13 @@ class Solution {
         maps.put('M',1000);
 
         int result = 0;
-        char[] nums = s.toCharArray();
+        // char[] nums = s.toCharArray();
         for(int i = 0;i<s.length(); i++){
-            if(i+1 < s.length() && maps.get(nums[i]) < maps.get(nums[i+1])){
-                result-=maps.get(nums[i]);
+            if(i+1 < s.length() && maps.get(s.charAt(i)) < maps.get(s.charAt(i+1))){
+                result-=maps.get(s.charAt(i));
             }
             else{
-                result+=maps.get(nums[i]);
+                result+=maps.get(s.charAt(i));
             }
         }
         // result+=maps.get(nums[s.length()-1]);

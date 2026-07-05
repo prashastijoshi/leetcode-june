@@ -7,10 +7,7 @@ class Solution {
                     stack.pop();
                 }
             }
-            else if(str.equals("./")){
-                continue;
-            }
-            else{
+            else if(!str.equals("./")){
                 stack.push(str);
             }
         }

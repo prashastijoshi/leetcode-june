@@ -12,11 +12,7 @@ class Solution {
             }
         }
 
-        int count = 0;
-        while(!stack.isEmpty()){
-            stack.pop();
-            count++;
-        }
-        return count;
+        
+        return stack.size();
     }
 }

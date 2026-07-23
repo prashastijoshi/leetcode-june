@@ -12,11 +12,11 @@ class Solution {
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
                 if(grid[i][j]==1){
-                    perimeter+=dfs(i,j);
+                    return dfs(i,j);
                 }
             }
         }
-        return perimeter;
+        return 0;
 
         
     }

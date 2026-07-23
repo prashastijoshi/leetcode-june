@@ -1,0 +1,34 @@
+class Solution {
+    private int[][] grid;
+    private int rows, cols;
+    private boolean[][] visited;
+    public int islandPerimeter(int[][] grid) {
+        this.grid = grid;
+        this.rows = grid.length;
+        this.cols = grid[0].length;
+        this.visited = new boolean[rows][cols];
+        int perimeter=0;
+
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                if(grid[i][j]==1){
+                    perimeter+=dfs(i,j);
+                }
+            }
+        }
+        return perimeter;
+
+        
+    }
+    public int dfs(int i,int j){
+        if(i<0 || j<0 || i>=rows || j>=cols || grid[i][j]==0){
+            return 1;
+        }
+        if(visited[i][j]){
+            return 0;
+        }
+
+        visited[i][j] = true;
+        return dfs(i,j+1)+dfs(i+1,j)+dfs(i-1,j)+dfs(i,j-1);
+    }
+}
